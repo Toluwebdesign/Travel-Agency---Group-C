@@ -528,6 +528,10 @@ nav {
         margin-top: 3rem;
     }
 
+    .hero-content button {
+        margin-bottom: 10px;
+    }       
+
     .hero-content h1 {
         font-size: 2rem;
     }
