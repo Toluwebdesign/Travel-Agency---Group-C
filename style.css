@@ -1,0 +1,33 @@
+:root {
+  /* Color Palette */
+  --color-primary: #0b1325;       /* Dark Navy (CTA section & Header) */
+  --color-accent: #f59e0b;        /* Gold / Orange Accent Button */
+  --color-accent-hover: #d97706;  /* Button Hover State */
+  --color-bg-light: #f8fafc;      /* Light Gray Section Background */
+  --color-card-bg: #ffffff;       /* Pure White Card Background */
+  --color-text-main: #1e293b;     /* Dark Slate Text */
+  --color-text-muted: #64748b;    /* Subtitles & Secondary Text */
+  --color-border: #e2e8f0;        /* Subtle Border Lines */
+
+  /* Typography */
+  --font-heading: 'Georgia', 'Times New Roman', serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+
+  /* Spacing & Borders */
+  --radius-sm: 6px;
+  --radius-lg: 12px;
+  --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Global Reset Required by Rules */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-text-main);
+  background-color: #ffffff;
+}
