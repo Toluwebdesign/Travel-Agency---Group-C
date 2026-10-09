@@ -6,38 +6,37 @@
     <title>Wanderlust Destinations Homepage</title>
 </head>
 <body>
-    <main>
-        <header>
-            <nav>
-                <div>
-                    <img>
-                    <h1>Wanderlust Destinations</h1>
-                </div>
-                <div class="nav-right">
-                    <ul>
-                        <li>Home</li>
-                        <li>Tour Packages</li>
-                        <li>Testimonials</li>
-                        <li>Plan Your Trip</li>
-                    </ul>
-                    <button type="button">Get Started</button>
-                </div>
-            </nav>
+    <header id="home">
+        <nav>
             <div>
-                <h4>EXPERIENCE THE EXTRAORDINARY</h4>
+                <img src="images/compass-icon.jpg">
+                <span>Wanderlust Destinations</span>
             </div>
-            <h2>Explore the World's Best Destinations</h2>
-            <p>Curated luxury travel experiences designed to inspire your spirit and create memories that last a life time.</p>
-            <button type="button">Plan Your Trip</button>
-            <button type="button">Explore Gallery</button>
-        </header>
-
-        <section class="tour-packages">
+            <div class="nav-right">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#packages">Tour Packages</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#plan-trip">Plan Your Trip</a></li>
+                </ul>
+                <button type="button">Get Started</button>
+            </div>
+        </nav>
+        <div>
+            <h4>EXPERIENCE THE EXTRAORDINARY</h4>
+        </div>
+        <h1>Explore the World's Best Destinations</h1>
+        <p>Curated luxury travel experiences designed to inspire your spirit and create memories that last a lifetime.</p>
+        <button type="button">Plan Your Trip</button>
+        <button type="button">Explore Gallery</button>
+    </header>
+    <main>
+        <section class="tour-packages" id="packages">
             <h4>PREMIUM EXPERIENCES</h4>
             <h3>Featured Tour Packages</h3>
             <div class="flex">
                 <div class="left">
-                    <p>Hand-picked journeys across seven continents, crafted with passiona and local expertise for the modern explorer.</p>
+                    <p>Hand-picked journeys across seven continents, crafted with passion and local expertise for the modern explorer.</p>
                 </div>
                 <div class="right">
                     <p>Browse All Packages  ></p>
@@ -48,11 +47,11 @@
                     <!--Image container-->
                     <div class="card-image-wrapper">
                         <span class="badge badge-popular">Best Seller</span>
-                        <img src="alpine-summit.jpg" alt="Alpine Summit Expedition" class="card-img">
+                        <img src="images/alpine-summit.avif" alt="Alpine Summit Expedition" class="card-img">
                     </div>
                      <!-- Content Container -->
                     <div class="card-content">
-                        <span class="card-meta">🏔️ 6 Days / 5 Nights</span>
+                        <span class="card-meta">🏔️ 7 Days / 5 Nights</span>
                         <h3 class="card-title">Alpine Summit Expedition</h3>
                         
                         <ul class="card-features">
@@ -75,7 +74,7 @@
                     <!--Image container-->
                     <div class="card-image-wrapper">
                         <span class="badge badge-popular">Cultural</span>
-                        <img src="alpine-summit.jpg" alt="Alpine Summit Expedition" class="card-img">
+                        <img src="images/historic-european.avif" alt="Historic European Charms" class="card-img">
                     </div>
                      <!-- Content Container -->
                     <div class="card-content">
@@ -102,7 +101,7 @@
                     <!--Image container-->
                     <div class="card-image-wrapper">
                         <span class="badge badge-popular">Adventure</span>
-                        <img src="alpine-summit.jpg" alt="Alpine Summit Expedition" class="card-img">
+                        <img src="images/amazonian-canopy.jpg" alt="Amazonian Canopy Quest" class="card-img">
                     </div>
                      <!-- Content Container -->
                     <div class="card-content">
@@ -110,15 +109,15 @@
                         <h3 class="card-title">Amazonian Canopy Quest</h3>
                         
                         <ul class="card-features">
-                            <li></li>
-                            <li>Panoramic Peak Views</li>
-                            <li>Luxury Mountain Lodge</li>
+                            <li>Wildlife Discovery</li>
+                            <li>River Boat Safaris</li>
+                            <li>Eco-Friendly Camping</li>
                         </ul>
                         <!-- Footer Row -->
                         <div class="card-footer">
                             <div class="price-group">
                                 <span class="price-label">Starting From</span>
-                                <span class="price-amount">$1,299</span>
+                                <span class="price-amount">$980</span>
                             </div>
                             <a href="#" class="btn-details">View Details</a>
                         </div>
@@ -126,6 +125,207 @@
                 </div>
             </div>
         </section>
+
+
+        <section class="testimonials" id="testimonials">
+            <div class="testimonial-heading">
+                <h4>GUEST REVIEWS</h4>
+                <h2>What Our Travelers Say</h2>
+            </div>
+
+            <div class="testimonial-cards">
+                <article class="testimonial-card">
+                    <div class="testimonial-rating" aria-label="5 out of 5 stars">
+                        ★★★★★
+                    </div>
+
+                    <blockquote>
+                        "The attention to detail on our Alpine trek was phenomenal.
+                        From the route planning to the gourmet meals at the lodges,
+                        Wanderlust exceeded every expectation."
+                    </blockquote>
+
+                    <div class="testimonial-author">
+                        <img src="marcus-thorne.jpg"
+                             alt="Marcus Thorne"
+                             class="author-img">
+
+                        <div class="author-info">
+                            <h3>Marcus Thorne</h3>
+                            <p>Denver, Colorado</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="testimonial-card">
+                    <div class="testimonial-rating" aria-label="5 out of 5 stars">
+                        ★★★★★
+                    </div>
+
+                    <blockquote>
+                        "Our European city tour was like walking through a history
+                        book. The local guides were incredibly knowledgeable and
+                        the boutique hotels were hand-picked perfectly."
+                    </blockquote>
+
+                    <div class="testimonial-author">
+                        <img src="elena-rodriguez.jpg"
+                             alt="Elena Rodriguez"
+                             class="author-img">
+
+                        <div class="author-info">
+                            <h3>Elena Rodriguez</h3>
+                            <p>Madrid, Spain</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="testimonial-card">
+                    <div class="testimonial-rating" aria-label="4 out of 5 stars">
+                        ★★★★☆
+                    </div>
+
+                    <blockquote>
+                        "I never thought I'd see a jaguar in the wild, but
+                        Wanderlust made it happen safely. Truly a life-changing
+                        adventure in the heart of the rainforest."
+                    </blockquote>
+
+                    <div class="testimonial-author">
+                        <img src="david-chen.jpg"
+                             alt="David Chen"
+                             class="author-img">
+
+                        <div class="author-info">
+                            <h3>David Chen</h3>
+                            <p>Vancouver, BC</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="testimonial-partners">
+                <span>◎ Travel+Leisure</span>
+                <span>☆ Conde Nast</span>
+                <span>♧ TripAdvisor</span>
+            </div>
+        </section>
+
+
+        <section class="plan-trip" id="plan-trip">
+            <div class="plan-trip-content">
+                <div class="plan-trip-text">
+                    <h4>YOUR NEXT ADVENTURE STARTS HERE</h4>
+                    <h2>Let's Plan Your Dream Trip</h2>
+                    <p>
+                        Tell us what inspires you, and our travel experts will
+                        help create an unforgettable journey tailored to you.
+                    </p>
+
+                    <div class="travel-stats">
+                        <div class="stat-item">
+                            <h3>500+</h3>
+                            <p>Destinations</p>
+                        </div>
+
+                        <div class="stat-item">
+                            <h3>12k+</h3>
+                            <p>Happy Travelers</p>
+                        </div>
+
+                        <div class="stat-item">
+                            <h3>150+</h3>
+                            <p>Expert Guides</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="trip-form-container">
+                    <h3>Plan Your Journey</h3>
+                    <p>Share a few details about your ideal getaway.</p>
+
+                    <form action="#" method="post">
+                        <div class="form-group">
+                            <label for="destination">Preferred Destination</label>
+                            <input type="text"
+                                   id="destination"
+                                   name="destination"
+                                   placeholder="Where would you like to go?"
+                                   required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="travel-month">Preferred Travel Month</label>
+                            <input type="month"
+                                   id="travel-month"
+                                   name="travel-month"
+                                   required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="travelers">Number of Travelers</label>
+                            <input type="number"
+                                   id="travelers"
+                                   name="travelers"
+                                   min="1"
+                                   max="50"
+                                   value="1"
+                                   required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email"
+                                   id="email"
+                                   name="email"
+                                   placeholder="you@example.com"
+                                   required>
+                        </div>
+
+                        <button type="submit" class="btn-plan-trip">
+                            Plan Your Trip
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+
     </main>
+
+
+<footer class="site-footer">
+    <div class="footer-content">
+
+        <div class="footer-brand">
+            <h2>Wanderlust Destinations</h2>
+            <p>
+                Discover extraordinary places and create unforgettable
+                memories with travel experiences made for you.
+            </p>
+        </div>
+
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#packages">Tour Packages</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#plan-trip">Plan Your Trip</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-contact">
+            <h3>Get in Touch</h3>
+            <p>Ready to plan your next adventure?</p>
+            <a href="#plan-trip">Contact Our Travel Team</a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 Wanderlust Destinations. All rights reserved.</p>
+    </div>
+</footer>
 </body>
 </html>
