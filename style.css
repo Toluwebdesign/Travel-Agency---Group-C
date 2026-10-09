@@ -31,3 +31,521 @@ body {
   color: var(--color-text-main);
   background-color: #ffffff;
 }
+
+/* 1. BASIC PAGE STYLES */
+
+:root {
+    --color-primary: #0b1325;
+    --color-accent: #f59e0b;
+    --color-accent-hover: #d97706;
+    --color-bg-light: #f8fafc;
+    --color-card-bg: #ffffff;
+    --color-text-main: #1e293b;
+    --color-text-muted: #64748b;
+    --color-border: #e2e8f0;
+
+    --font-heading: Georgia, "Times New Roman", serif;
+    --font-body: Inter, system-ui, sans-serif;
+
+    --radius-sm: 6px;
+    --radius-lg: 12px;
+    --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-body);
+    color: var(--color-text-main);
+    background-color: var(--color-bg-light);
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+
+/* 2. NAVBAR AND HERO */
+
+header#home {
+    padding: 1.5rem 5%;
+    color: white;
+
+    background-image:
+        linear-gradient(rgba(11, 19, 37, 0.7),
+                        rgba(11, 19, 37, 0.7)),
+        url("images/hero-destination.avif");
+
+    background-size: cover;
+    background-position: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.logo {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+}
+
+.nav-brand span {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.nav-right ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-right a:hover {
+    color: var(--color-accent);
+}
+
+.nav-right button,
+.hero-content button,
+.btn-plan-trip {
+    background-color: var(--color-accent);
+    color: var(--color-primary);
+    border: none;
+    padding: 0.75rem 1.1rem;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.nav-right button:hover,
+.hero-content button:hover,
+.btn-plan-trip:hover {
+    background-color: var(--color-accent-hover);
+}
+
+.hero-content {
+    max-width: 700px;
+    margin: 6rem auto 3rem;
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+.hero-content h1 {
+    font-family: var(--font-heading);
+    font-size: 2.7rem;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    margin-bottom: 1.5rem;
+}
+
+.hero-content h4,
+.testimonial-heading h4,
+.plan-trip-text h4 {
+    color: var(--color-accent);
+    letter-spacing: 2px;
+}
+
+
+/* 3. TOUR PACKAGES */
+
+.tour-packages {
+    padding: 4rem 5%;
+}
+
+.tour-packages > h3 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.left {
+    max-width: 600px;
+}
+
+.right a {
+    color: var(--color-accent-hover);
+    font-weight: bold;
+}
+
+.tour-cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+}
+
+.tour-card {
+    background-color: var(--color-card-bg);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+    overflow: hidden;
+}
+
+.card-image-wrapper {
+    position: relative;
+}
+
+.card-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.badge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background-color: var(--color-accent);
+    color: var(--color-primary);
+    padding: 0.3rem 0.6rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.card-content {
+    padding: 1.25rem;
+}
+
+.card-meta,
+.price-label {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+}
+
+.card-title {
+    font-family: var(--font-heading);
+}
+
+.card-features {
+    padding-left: 1.2rem;
+    color: var(--color-text-muted);
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.75rem;
+    border-top: 1px solid var(--color-border);
+    padding-top: 1rem;
+}
+
+.price-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.price-amount {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.btn-details {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 0.6rem 0.8rem;
+    border-radius: var(--radius-sm);
+}
+
+.btn-details:hover {
+    background-color: var(--color-accent-hover);
+}
+
+
+/* 4. TESTIMONIALS */
+
+.testimonials {
+    padding: 4rem 5%;
+    background-color: #ffffff;
+}
+
+.testimonial-heading {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.testimonial-heading h2 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+}
+
+.testimonial-cards {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.testimonial-card {
+    flex: 1;
+    min-width: 0;
+    padding: 1.5rem;
+    background-color: var(--color-bg-light);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+}
+
+.testimonial-rating {
+    color: var(--color-accent-hover);
+}
+
+.testimonial-card blockquote {
+    margin: 1rem 0;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.author-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.author-info h3,
+.author-info p {
+    margin: 0;
+}
+
+.author-info p {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+}
+
+.testimonial-partners {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2.5rem;
+    color: var(--color-text-muted);
+}
+
+
+/* 5. PLAN YOUR TRIP */
+
+.plan-trip {
+    padding: 4rem 5%;
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.plan-trip-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.plan-trip-text h2 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+}
+
+.travel-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.stat-item h3 {
+    color: var(--color-accent);
+    margin-bottom: 0;
+}
+
+.stat-item p {
+    margin-top: 0.25rem;
+}
+
+.trip-form-container {
+    background-color: white;
+    color: var(--color-text-main);
+    padding: 1.5rem;
+    border-radius: var(--radius-lg);
+}
+
+.trip-form-container form {
+    margin-top: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+}
+
+.form-group input:focus {
+    outline: 2px solid var(--color-accent);
+}
+
+.btn-plan-trip {
+    width: 100%;
+}
+
+
+/* 6. FOOTER */
+
+.site-footer {
+    padding: 3rem 5% 1rem;
+    background-color: #080e1b;
+    color: white;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 2rem;
+}
+
+.footer-brand p,
+.footer-contact p {
+    color: #cbd5e1;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-links a:hover,
+.footer-contact a:hover {
+    color: var(--color-accent);
+}
+
+.footer-bottom {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #334155;
+    text-align: center;
+    color: #cbd5e1;
+    font-size: 0.9rem;
+}
+
+
+/* 7. RESPONSIVE DESIGN */
+
+@media (max-width: 800px) {
+    .tour-cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .testimonial-cards {
+        flex-wrap: wrap;
+    }
+
+    .testimonial-card {
+        flex-basis: 45%;
+    }
+
+    .plan-trip-content {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    nav,
+    .nav-right {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-right ul {
+        flex-wrap: wrap;
+        gap: 0.75rem;
+    }
+
+    .hero-content {
+        margin-top: 3rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .flex {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .tour-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .testimonial-card {
+        flex-basis: 100%;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+}
