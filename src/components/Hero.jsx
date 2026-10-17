@@ -1,7 +1,16 @@
 
 function Hero() {
   return (
-    <section className="bg-slate-950 px-4 py-20 text-white sm:px-8 sm:py-28 lg:px-16">
+    <section
+      className="relative isolate overflow-hidden bg-slate-950 bg-cover bg-center px-4 py-20 text-white sm:px-8 sm:py-28 lg:px-16"
+      style={{
+        backgroundImage:
+          "url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=2000&q=85')",
+      }}
+    >
+      {/* Dark overlay */}
+      <div className="absolute inset-0 -z-10 bg-slate-950/65" />
+
       <div className="mx-auto max-w-7xl">
         <p className="text-sm font-bold tracking-[0.2em] text-amber-400">
           EXPERIENCE THE EXTRAORDINARY
@@ -11,7 +20,7 @@ function Hero() {
           Explore the World's Best Destinations
         </h1>
 
-        <p className="mt-6 max-w-2xl leading-7 text-slate-300">
+        <p className="mt-6 max-w-2xl leading-7 text-slate-200">
           Curated luxury travel experiences designed to inspire your spirit
           and create memories that last a lifetime.
         </p>
