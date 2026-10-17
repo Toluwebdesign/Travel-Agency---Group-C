@@ -87,7 +87,7 @@ function MainContent() {
                     ))}
                   </ul>
 
-                  <div className="mt-6 flex items-center justify-between gap-3 border-t border-slate-200 pt-4">
+                  <div className="mt-6 flex flex-wrap items-center justify-between gap-3 border-t border-slate-200 pt-4">
                     <p className="font-bold text-slate-900">
                       <span className="block text-xs font-normal text-slate-500">
                         Starting from
@@ -106,7 +106,7 @@ function MainContent() {
 
                     <button
                       type="button"
-                      className="rounded-lg bg-slate-900 px-4 py-2 text-sm font-semibold text-white hover:bg-amber-600"
+                      className="shrink-0 rounded-lg bg-slate-900 px-3 py-2 text-sm font-semibold text-white hover:bg-amber-600 sm:px-4"
                     >
                       View Details
                     </button>
