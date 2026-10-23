@@ -1,0 +1,9 @@
+
+{
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "https://travel-agency-group-c.onrender.com/api/:path*"
+    }
+  ]
+}

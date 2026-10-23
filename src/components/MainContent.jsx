@@ -10,7 +10,7 @@ function MainContent() {
   useEffect(() => {
     async function loadPackages() {
       try {
-        const response = await fetch('http://localhost:3000/api/packages');
+        const response = await fetch('/api/packages');
         if (!response.ok) throw new Error('Request failed');
         const data = await response.json();
         setPackages(data);
