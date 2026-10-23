@@ -1,8 +1,12 @@
 
 import { useState } from 'react';
+import { authClient } from '../auth-client';
+import AuthModal from './AuthModal';
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [showAuth, setShowAuth] = useState(false);
+  const { data: session } = authClient.useSession();
 
   function closeMenu() {
     setIsMenuOpen(false);
@@ -44,12 +48,23 @@ function Header() {
           <a href="#plan-trip" className="hover:text-amber-400">Plan Your Trip</a>
         </div>
 
-        <a
-          href="#plan-trip"
-          className="hidden rounded-lg bg-amber-500 px-4 py-2 font-semibold text-slate-950 hover:bg-amber-400 md:inline-flex"
-        >
-          Get Started
-        </a>
+        {session ? (
+          <button
+            type="button"
+            onClick={() => authClient.signOut()}
+            className="hidden rounded-lg bg-amber-500 px-4 py-2 font-semibold text-slate-950 hover:bg-amber-400 md:inline-flex"
+          >
+            Sign out
+          </button>
+        ) : (
+          <button
+            type="button"
+            onClick={() => setShowAuth(true)}
+            className="hidden rounded-lg bg-amber-500 px-4 py-2 font-semibold text-slate-950 hover:bg-amber-400 md:inline-flex"
+          >
+            Sign in
+          </button>
+        )}
 
         {/* Mobile dropdown menu */}
         {isMenuOpen && (
@@ -69,18 +84,29 @@ function Header() {
             <a href="#plan-trip" onClick={closeMenu} className="hover:text-amber-400">
               Plan Your Trip
             </a>
-            <a
-              href="#plan-trip"
-              onClick={closeMenu}
-              className="self-start rounded-lg bg-amber-500 px-4 py-2 font-semibold text-slate-950 hover:bg-amber-400"
-            >
-              Get Started
-            </a>
-          </div>
-        )}
-      </nav>
-    </header>
-  );
-}
+            {session ? (
+              <button
+                type="button"
+                onClick={() => { authClient.signOut(); closeMenu(); }}
+                className="self-start rounded-lg bg-amber-500 px-4 py-2 font-semibold text-slate-950 hover:bg-amber-400"
+              >
+                Sign out
+              </button>
+            ) : (
+              <button
+                type="button"
+                onClick={() => { setShowAuth(true); closeMenu(); }}
+                className="self-start rounded-lg bg-amber-500 px-4 py-2 font-semibold text-slate-950 hover:bg-amber-400"
+              >
+                Sign in
+              </button>
+            )}
+                      </div>
+                    )}
+                  </nav>
+                  {showAuth && <AuthModal onClose={() => setShowAuth(false)} />}
+                </header>
+              );
+            }
 
 export default Header;

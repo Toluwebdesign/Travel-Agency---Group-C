@@ -1,9 +1,28 @@
 
-import { useState } from 'react';
-import packages from '../data/packages';
+import { useState, useEffect } from 'react';
 import QuantityStepper from './QuantityStepper';
 
 function MainContent() {
+  const [packages, setPackages] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    async function loadPackages() {
+      try {
+        const response = await fetch('http://localhost:3000/api/packages');
+        if (!response.ok) throw new Error('Request failed');
+        const data = await response.json();
+        setPackages(data);
+      } catch (err) {
+        setError('Could not load tours. Please try again later.');
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    loadPackages();
+  }, []);
   const [category, setCategory] = useState('All');
 
   const filteredPackages =
@@ -54,6 +73,9 @@ function MainContent() {
               </select>
             </label>
           </div>
+
+          {loading && <p className="mt-8 text-slate-600">Loading tours...</p>}
+          {error && <p className="mt-8 text-red-600">{error}</p>}
 
           <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
             {filteredPackages.map((tour) => (
