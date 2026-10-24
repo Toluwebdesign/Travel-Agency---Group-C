@@ -6,7 +6,7 @@ import AuthModal from './AuthModal';
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [showAuth, setShowAuth] = useState(false);
-  const { data: session } = authClient.useSession();
+  const { data: session, isPending } = authClient.useSession();
 
   function closeMenu() {
     setIsMenuOpen(false);
@@ -48,7 +48,7 @@ function Header() {
           <a href="#plan-trip" className="hover:text-amber-400">Plan Your Trip</a>
         </div>
 
-        {session ? (
+        {isPending ? null : session ? (
           <button
             type="button"
             onClick={() => authClient.signOut()}
